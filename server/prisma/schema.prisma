@@ -26,3 +26,11 @@ model Link {
   updatedAt   DateTime @updatedAt
   url         String
 }
+
+model Tag {
+  createdAt   DateTime @default(now())
+  description String?
+  id          String   @id @default(cuid())
+  name        String   @unique
+  updatedAt   DateTime @updatedAt
+}

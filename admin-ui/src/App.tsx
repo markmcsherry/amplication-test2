@@ -13,6 +13,10 @@ import { LinkList } from "./link/LinkList";
 import { LinkCreate } from "./link/LinkCreate";
 import { LinkEdit } from "./link/LinkEdit";
 import { LinkShow } from "./link/LinkShow";
+import { TagList } from "./tag/TagList";
+import { TagCreate } from "./tag/TagCreate";
+import { TagEdit } from "./tag/TagEdit";
+import { TagShow } from "./tag/TagShow";
 import { jwtAuthProvider } from "./auth-provider/ra-auth-jwt";
 
 const App = (): React.ReactElement => {
@@ -32,7 +36,7 @@ const App = (): React.ReactElement => {
   return (
     <div className="App">
       <Admin
-        title={"My app"}
+        title={"Links"}
         dataProvider={dataProvider}
         authProvider={jwtAuthProvider}
         theme={theme}
@@ -52,6 +56,13 @@ const App = (): React.ReactElement => {
           edit={LinkEdit}
           create={LinkCreate}
           show={LinkShow}
+        />
+        <Resource
+          name="Tag"
+          list={TagList}
+          edit={TagEdit}
+          create={TagCreate}
+          show={TagShow}
         />
       </Admin>
     </div>
