@@ -3,6 +3,7 @@ import { APP_INTERCEPTOR } from "@nestjs/core";
 import { MorganInterceptor, MorganModule } from "nest-morgan";
 import { UserModule } from "./user/user.module";
 import { LinkModule } from "./link/link.module";
+import { TagModule } from "./tag/tag.module";
 import { ACLModule } from "./auth/acl.module";
 import { AuthModule } from "./auth/auth.module";
 import { HealthModule } from "./health/health.module";
@@ -17,6 +18,7 @@ import { GraphQLModule } from "@nestjs/graphql";
   imports: [
     UserModule,
     LinkModule,
+    TagModule,
     ACLModule,
     AuthModule,
     HealthModule,
